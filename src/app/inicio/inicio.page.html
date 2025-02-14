@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-title> Bienvenido a Mi App</ion-title>
+
+  <div class="ion-padding">
+    <ion-input #nombreInput class="ion-padding-vertical" placeholder="Introduce tu nombre..."></ion-input>
+  <ion-button (click)="mostrarNombre()" class="ion-padding-vertical" expand="block">Mostrar nombre</ion-button>
+
+  <ion-label *ngIf="nombreMostrado" class="ion-padding-vertical">Hola {{ nombreMostrado }}, bienvenido a Ionic.</ion-label>
+  </div>
+  
+  <div class="ion-padding">
+    <ion-title>Lista de tecnologías</ion-title>
+  </div>
+
+<!-- filepath: /c:/Users/CarlosGPC/Documents/Proyectos/ionic - Examen/MiAppExamen/src/app/inicio/inicio.page.html -->
+<ion-list class="ion-padding">
+  <ion-item>
+    <ion-icon name="logo-javascript" slot="start"></ion-icon>
+    <ion-label>TypeScript</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="logo-react" slot="start"></ion-icon>
+    <ion-label>React</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="logo-angular" slot="start"></ion-icon>
+    <ion-label>Angular</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="logo-vue" slot="start"></ion-icon>
+    <ion-label>Vue</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="logo-nodejs" slot="start"></ion-icon>
+    <ion-label>Node.js</ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>
